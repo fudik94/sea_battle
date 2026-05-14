@@ -1,5 +1,6 @@
 from board import Board
 from main_battle import MainBattle
+from main_menu import MainMenu
 
 class MainGame:
     def __init__(self):
@@ -12,7 +13,8 @@ class MainGame:
         self.end()
 
     def setup(self):
-        pass
+        menu = MainMenu()
+        menu.show()
 
     def battle(self):
         battle = MainBattle(self.player_board, self.enemy_board)
