@@ -1,4 +1,5 @@
 from board import Board
+from main_battle import MainBattle
 
 class MainGame:
     def __init__(self):
@@ -14,7 +15,8 @@ class MainGame:
         pass
 
     def battle(self):
-        pass
+        battle = MainBattle(self.player_board, self.enemy_board)
+        battle.start()
 
     def end(self):
         pass
