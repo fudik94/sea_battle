@@ -1,5 +1,5 @@
-from game import Game
+from game_services import GameServices
 
 if __name__ == "__main__":
-    game = Game()
-    game.start()
+    services = GameServices()
+    services.launch()
