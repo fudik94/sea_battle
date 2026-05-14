@@ -1,11 +1,11 @@
-from board import Board
+from game_grid import GameGrid
 from main_battle import MainBattle
 from main_menu import MainMenu
 
 class MainGame:
     def __init__(self):
-        self.player_board = Board()
-        self.enemy_board = Board()
+        self.player_board = GameGrid()
+        self.enemy_board = GameGrid()
 
     def start(self):
         self.setup()
