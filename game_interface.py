@@ -13,3 +13,13 @@ class GameInterface:
         for i, item in enumerate(items):
             print(f"{i + 1}. {item}")
 
+    def show_list_return_answer(self, items: list):
+        self.show_list(items)
+        while True:
+            raw = input("Enter number: ").strip()
+            if raw.isdigit():
+                index = int(raw) - 1
+                if 0 <= index < len(items):
+                    return items[index]
+            print(f"Please enter a number between 1 and {len(items)}")
+
