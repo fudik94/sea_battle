@@ -14,10 +14,10 @@ class MainGame:
 
     def setup(self):
         menu = MainMenu()
+        self.mode = menu.show()
         size = menu.choose_board_size()
         self.player_board = GameGrid(size)
         self.enemy_board = GameGrid(size)
-        menu.show()
 
     def battle(self):
         battle = MainBattle(self.player_board, self.enemy_board)
