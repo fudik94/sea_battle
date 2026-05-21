@@ -11,7 +11,6 @@ class MainMenu:
 
     def show(self) -> str:
         self.ui.show_text("=== SEA BATTLE ===")
-        self.ui.show_all()
         return self.show_options()
 
     def show_options(self) -> str:
