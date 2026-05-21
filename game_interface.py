@@ -16,6 +16,9 @@ class GameInterface:
     def show_text(self, text: str):
         print(text)
 
+    def show_hint(self, hint: str):
+        print(f"[HINT] {hint}")
+
     def show_list_return_answer(self, items: list):
         self.show_list(items)
         while True:
