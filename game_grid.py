@@ -1,7 +1,9 @@
 from grid_object_enum import GridObject
 
 class GameGrid:
-    def __init__(self, size=10):
+    DEFAULT_SIZE = 5
+
+    def __init__(self, size=DEFAULT_SIZE):
         self.size = size
         self.grid = [[GridObject.EMPTY for _ in range(self.size)] for _ in range(self.size)]
 
