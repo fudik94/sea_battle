@@ -21,3 +21,7 @@ class ShipCollection:
 
     def count(self):
         return len(self.ships)
+
+    def can_all_fit(self, grid):
+        total_ship_cells = sum(s.ship.size for s in self.ships)
+        return total_ship_cells <= grid.size * grid.size
