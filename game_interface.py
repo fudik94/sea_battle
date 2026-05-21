@@ -9,3 +9,7 @@ class GameInterface:
         for row in grid.grid:
             print(' '.join(cell.value for cell in row))
 
+    def show_list(self, items: list):
+        for i, item in enumerate(items):
+            print(f"{i + 1}. {item}")
+
