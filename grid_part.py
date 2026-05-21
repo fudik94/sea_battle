@@ -5,6 +5,8 @@ class GridPart:
         self.cells = cells
 
     def fits(self, grid, origin_x, origin_y):
+        if not grid.can_fit_ship(self):
+            return False
         for dx, dy in self.cells:
             x, y = origin_x + dx, origin_y + dy
             if not grid.is_within_bounds(x, y):

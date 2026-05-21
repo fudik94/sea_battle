@@ -16,5 +16,10 @@ class GameGrid:
     def is_within_bounds(self, x, y):
         return 0 <= x < self.size and 0 <= y < self.size
 
+    def can_fit_ship(self, grid_part):
+        max_x = max(dx for dx, dy in grid_part.cells)
+        max_y = max(dy for dx, dy in grid_part.cells)
+        return max_x < self.size and max_y < self.size
+
     def reset(self):
         self.grid = [[GridObject.EMPTY for _ in range(self.size)] for _ in range(self.size)]
