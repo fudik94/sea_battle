@@ -13,6 +13,9 @@ class GameInterface:
         for i, item in enumerate(items):
             print(f"{i + 1}. {item}")
 
+    def show_text(self, text: str):
+        print(text)
+
     def show_list_return_answer(self, items: list):
         self.show_list(items)
         while True:
